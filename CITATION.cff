@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: Aria
+    given-names: Nouri
+    orcid: "https://orcid.org/0000-0001-5548-184X"
+title: "ISI Wiretap Channels [SIMULATION_FILES]"
+version: v1.0.0
+doi: 10.5281/zenodo.5589452
+url: "https://zenodo.org/record/5589452#.YXGGIhyhWUk"
+date-released: 2021-10-21
