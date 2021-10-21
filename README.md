@@ -1,4 +1,4 @@
-## ISI-Wiretap-Channel
+## ISI-Wiretap-Channels
 
 ![Uplink Transmission in NB-IoT Platforms](https://github.com/arianouri/ISI-Wiretap-Channels/blob/main/%5BSIMULATION_FILES%5D%20Constrained%20Secrecy%20Capacity/_unconstrained_ptp_capacity/nbiot_uplink.svg)
 
