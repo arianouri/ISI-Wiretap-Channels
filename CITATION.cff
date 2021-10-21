@@ -1,8 +1,8 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite it as below."
+message: "Citation info."
 authors:
-  - family-names: Aria
-    given-names: Nouri
+  - family-names: Nouri
+    given-names: Aria
     orcid: "https://orcid.org/0000-0001-5548-184X"
 title: "ISI Wiretap Channels [SIMULATION_FILES]"
 version: v1.0.0
