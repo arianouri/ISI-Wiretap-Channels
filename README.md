@@ -1,5 +1,4 @@
-## ISI-Wiretap-Channels
-[![DOI](https://zenodo.org/badge/419676331.svg)](https://zenodo.org/badge/latestdoi/419676331)
+## ISI-Wiretap-Channels &nbsp; &nbsp; [![DOI](https://zenodo.org/badge/419676331.svg)](https://zenodo.org/badge/latestdoi/419676331)
 
 ![Uplink Transmission in NB-IoT Platforms](https://github.com/arianouri/ISI-Wiretap-Channels/blob/main/%5BSIMULATION_FILES%5D%20Constrained%20Secrecy%20Capacity/_unconstrained_ptp_capacity/nbiot_uplink.svg)
 
