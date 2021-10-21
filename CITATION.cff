@@ -4,7 +4,7 @@ authors:
   - family-names: Nouri
     given-names: Aria
     orcid: "https://orcid.org/0000-0001-5548-184X"
-title: "ISI Wiretap Channels [SIMULATION_FILES]"
+title: "ISI Wiretap Channels \[SIMULATION_FILES\]"
 version: v1.0.0
 doi: 10.5281/zenodo.5589452
 url: "https://zenodo.org/record/5589452#.YXGGIhyhWUk"
