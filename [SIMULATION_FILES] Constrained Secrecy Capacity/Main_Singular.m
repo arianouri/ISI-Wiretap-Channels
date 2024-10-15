@@ -1,3 +1,8 @@
+%% This file calculates CSC in NATs/sec (logs are natural),
+%  also the TFP of the channel is considered to be real, for complex channels
+% use Expectation_Maximization_MET_i_complex instead of Expectation_Maximization_MET_i_real
+% notice: Expectation_Maximization_MET_i_complex calculates CSC in BITs/sec.
+
 clear all;clc;
 
 %% 
@@ -9,7 +14,7 @@ MONTE_simLength=1e5;
 MONTE_simAvg=10;
 
 kappa=1;
-kappaPrime=4;
+kappaPrime=1;
 
 wind_length=16;
 
@@ -123,7 +128,7 @@ WRTP.rx_noisless=unique(WRTP_rx_noisless_aux,'rows');
 %                                           Input_Size , kappa , kappaPrime , optIteration , ...
 %                                           TRELLIS_io );
 
-    [TRANSTAR_vec,C1]=Expectation_Maximization_MET_i( TRANS , ...
+    [TRANSTAR_vec,C1]=Expectation_Maximization_MET_i_real( TRANS , ...
                                           MAIN , WRTP , ...
                                           Input_Size , kappa , kappaPrime , optIteration , ...
                                           TRELLIS_io , wind_length );

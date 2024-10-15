@@ -2,7 +2,7 @@ function [states, branches_indexed, emissions_1, emissions_2]= JSWCgenerate(L,tr
 
     numBranches = size(trCube,3);
     numStates = size(trCube,1);
-    numEmission = size(emCube_1,4);
+    numEmission = size(emCube_1+emCube_2,4);
 
     branches_indexed = zeros(1,L);
     states = zeros(1,L);
@@ -16,7 +16,7 @@ function [states, branches_indexed, emissions_1, emissions_2]= JSWCgenerate(L,tr
     em_branch = zeros(numStates,length(SpecialiZe(Trellis_Index_io(Trellis_Index_io(:,1)==1,2)))*numBranches);
     for iStateIndex=1:numStates
         auxBranchIndex = 1;
-        for jStateIndex = [Trellis_Index_io(Trellis_Index_io(:,1)==iStateIndex,2)]'
+        for jStateIndex = [Trellis_Index_io(Trellis_Index_io(:,1)==iStateIndex,2)].'
             for branchIndex=1:numBranches
                 em_branch(iStateIndex,auxBranchIndex) = trCube(iStateIndex,jStateIndex,branchIndex);
                 auxBranchIndex=auxBranchIndex + 1;
@@ -41,8 +41,8 @@ function [states, branches_indexed, emissions_1, emissions_2]= JSWCgenerate(L,tr
             end
     %     branches(count) = branch;
         branches_indexed(count) = modif_mod(branch,numBranches);
-        emissions_1(emIndex:emIndex+numEmission-1)=(permute(emCube_1(currentstate,state,branches_indexed(count),:),[4 3 2 1]))';
-        emissions_2(emIndex:emIndex+numEmission-1)=(permute(emCube_2(currentstate,state,branches_indexed(count),:),[4 3 2 1]))';
+        emissions_1(emIndex:emIndex+numEmission-1)=(permute(emCube_1(currentstate,state,branches_indexed(count),:),[4 3 2 1])).';
+        emissions_2(emIndex:emIndex+numEmission-1)=(permute(emCube_2(currentstate,state,branches_indexed(count),:),[4 3 2 1])).';
         states(count) = state;
         currentstate = state;
         emIndex = emIndex + numEmission;

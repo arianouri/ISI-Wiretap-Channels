@@ -5,8 +5,8 @@ if State_Cardinality<State_Cardinality_MT
    error("minimum number of states is 2^(isiLength)");
 end
 Nbit=size(FrequencyResponse,2);
-tblInput=2*Truth_Table(Nbit)-1;
-Trans_Minimal=State_Cardinality;
+tblInput=-(2*Truth_Table(Nbit)-1);
+Trans_Minimal=zeros(State_Cardinality);
 
 sIndex=1;
 coIndex=1;
@@ -42,7 +42,7 @@ aux_Trellis_Extended_io=Trellis_Extended(:,[1 size(Trellis_Extended,2)]);
 numEmBranch = length(SpecialiZe(aux_Trellis_Extended_io(aux_Trellis_Extended_io(:,1)==1,2)));
 for ioState=1:State_Cardinality
     Trellis_Extended_io(aux_io_index:aux_io_index+numEmBranch-1,:)...
-        =[repmat(ioState,numEmBranch,1),(SpecialiZe(aux_Trellis_Extended_io(aux_Trellis_Extended_io(:,1)==ioState,2)))'];
+        =[repmat(ioState,numEmBranch,1),(SpecialiZe(aux_Trellis_Extended_io(aux_Trellis_Extended_io(:,1)==ioState,2))).'];
     aux_io_index = aux_io_index + numEmBranch;
 end
 

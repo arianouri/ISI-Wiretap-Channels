@@ -36,7 +36,7 @@ numEmBranch_1 = length(SpecialiZe(aux_Trellis_Extended_io_1(aux_Trellis_Extended
 for ioState=1:S_cardinal_1
     Trellis_Extended_io_1(aux_io_index:aux_io_index+numEmBranch_1-1,:)...
         =[repmat(ioState,numEmBranch_1,1),...
-         (SpecialiZe(aux_Trellis_Extended_io_1(aux_Trellis_Extended_io_1(:,1)==ioState,2)))'];
+         (SpecialiZe(aux_Trellis_Extended_io_1(aux_Trellis_Extended_io_1(:,1)==ioState,2))).'];
     aux_io_index = aux_io_index + numEmBranch_1;
 end
 
@@ -46,7 +46,7 @@ numEmBranch_2 = length(SpecialiZe(aux_Trellis_Extended_io_2(aux_Trellis_Extended
 for ioState=1:S_cardinal_2
     Trellis_Extended_io_2(aux_io_index:aux_io_index+numEmBranch_2-1,:)...
         =[repmat(ioState,numEmBranch_2,1),...
-         (SpecialiZe(aux_Trellis_Extended_io_2(aux_Trellis_Extended_io_2(:,1)==ioState,2)))'];
+         (SpecialiZe(aux_Trellis_Extended_io_2(aux_Trellis_Extended_io_2(:,1)==ioState,2))).'];
     aux_io_index = aux_io_index + numEmBranch_2;
 end
 
@@ -56,7 +56,7 @@ numEmBranch = length(SpecialiZe(aux_TRELLIS_io(aux_TRELLIS_io(:,1)==1,2)));
 for ioState=1:max(S_cardinal_1,S_cardinal_2)
     TRELLIS_io(aux_io_index:aux_io_index+numEmBranch-1,:)...
         =[repmat(ioState,numEmBranch,1),...
-         (SpecialiZe(aux_TRELLIS_io(aux_TRELLIS_io(:,1)==ioState,2)))'];
+         (SpecialiZe(aux_TRELLIS_io(aux_TRELLIS_io(:,1)==ioState,2))).'];
     aux_io_index = aux_io_index + numEmBranch;
 end
 
